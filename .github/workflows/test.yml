@@ -1,13 +1,23 @@
 name: My first github action
 on: [push]
 jobs:
+  # Name of the job
   build-app:
+    # the platform on which it runs on
     runs-on: ubuntu-latest
+    # Array of steps that takes place in sequence
     steps:
+      # uses: -> this will use the actions/checkout@v2 code to pull code from rpository
       - uses: actions/checkout@v2
+      # run: -> Here you can bash command
       - run: tree
+  # Name of the job
   build-app-2:
+    # the platform on which it runs on
     runs-on: ubuntu-latest
+    # Array of steps that takes place in sequence
     steps:
+      # uses: -> this will use the actions/checkout@v2 code to pull code from rpository
       - uses: actions/checkout@v2
+      # run: -> Here you can bash command
       - run: tree

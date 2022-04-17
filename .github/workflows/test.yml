@@ -9,8 +9,12 @@ jobs:
     steps:
       # uses: -> this will use the actions/checkout@v2 code to pull code from rpository
       - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.17.0'
       # run: -> Here you can bash command
-      - run: tree
+      - run: node -v
   # Name of the job
   build-app-2:
     # the platform on which it runs on

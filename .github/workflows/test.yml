@@ -6,3 +6,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: tree
+  build-app-2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: tree

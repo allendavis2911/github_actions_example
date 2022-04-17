@@ -9,12 +9,20 @@ jobs:
     steps:
       # uses: -> this will use the actions/checkout@v2 code to pull code from rpository
       - uses: actions/checkout@v2
-
+      # uses: -> this will use the actions/setup-node@v2 to install node in the container
       - uses: actions/setup-node@v2
+        # with: -> here you can mention the properties of the node install
         with:
+          # node-version: -> here you can specify the node versions
           node-version: '14.17.0'
       # run: -> Here you can bash command
       - run: node -v
+      # name: -> you can give a name to run
+      - name: Build the project
+        # run: -> Here you can bash command
+        run: yarn build
+      - name: Setup finish
+        run: echo "Setup Completed!"
   # Name of the job
   build-app-2:
     # the platform on which it runs on
